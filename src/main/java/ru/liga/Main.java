@@ -13,8 +13,8 @@ public class Main {
 
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
 
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Введите имя алгоритма: Single, Base, Optimal");
         ScannerFile scannerFile = new ScannerFile();
         Parcels parcels = new Parcels(scannerFile.parsFile("src/main/resources/data"));
