@@ -3,8 +3,8 @@ package ru.liga.sevice.imp;
 import ru.liga.parcel.Parcels;
 import ru.liga.sevice.MachineLoaderService;
 import ru.liga.sevice.ProcessLoaderService;
-import ru.liga.tuuck.Garage;
-import ru.liga.tuuck.Truck;
+import ru.liga.truck.Garage;
+import ru.liga.truck.Truck;
 
 import java.util.Arrays;
 import java.util.List;
@@ -29,16 +29,14 @@ public class ProcessLoaderServiceNewImpl implements ProcessLoaderService {
         garage.addTruck(new Truck(truckHeight, truckWidth, "name"));
         List<int[][]> parcelList = parcels.getParcelList();
         int parcelIndex = 0;
-
         while (!parcelList.isEmpty()) {
-            int[][] scheme = garage.getTruck().getScheme();
 
+            int[][] scheme = garage.getTruck().getScheme();
             if (addParcelToTruck(parcelList.get(parcelIndex), scheme, algorithmName, truckHeight, truckWidth)) {
                 parcelList.remove(parcelIndex);
                 parcelIndex = 0;
                 continue;
             }
-
             if (parcelIndex + 1 >= parcelList.size()) {
                 garage.addTruck(new Truck(truckHeight, truckWidth, "name"));
                 if (!addParcelToTruck(parcelList.get(parcelIndex), garage.getTruck().getScheme(), algorithmName, truckHeight, truckWidth)) {
@@ -47,12 +45,11 @@ public class ProcessLoaderServiceNewImpl implements ProcessLoaderService {
                 }
                 parcelList.remove(parcelIndex);
                 parcelIndex = 0;
-
             } else {
                 parcelIndex++;
             }
-        }
 
+        }
         return garage;
     }
 

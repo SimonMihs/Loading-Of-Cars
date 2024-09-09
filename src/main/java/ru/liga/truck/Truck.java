@@ -1,4 +1,4 @@
-package ru.liga.tuuck;
+package ru.liga.truck;
 
 
 public class Truck {
@@ -7,7 +7,9 @@ public class Truck {
     private final int width;
     private int[][] scheme;
     private String[] truck;
+
     public Truck(int height, int width, String name) {
+
         this.width = width;
         this.height = height;
         this.truck = createEmptyTruck(height, width);

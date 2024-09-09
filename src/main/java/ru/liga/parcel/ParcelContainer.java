@@ -1,25 +1,18 @@
 package ru.liga.parcel;
 
 import java.util.Arrays;
-import java.util.List;
 
 public class ParcelContainer {
 
     private final int[][] parcel;
 
 
-
-
     public ParcelContainer(int[][] parcel) {
-
         this.parcel = parcel;
-
-
     }
 
 
     public int[][] getParcel() {
-
         return parcel;
     }
 

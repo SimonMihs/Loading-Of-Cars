@@ -1,18 +1,19 @@
 package ru.liga.sevice.imp;
 
 import ru.liga.sevice.CheckInParcelService;
-import ru.liga.sevice.MachineLoaderService;
 import ru.liga.sevice.GetStartPositionService;
+import ru.liga.sevice.MachineLoaderService;
 
 public class MachineLoaderServiceOptimalImpl implements MachineLoaderService {
 
     CheckInParcelService checkInParcelService;
     GetStartPositionService getStartPositionService;
 
-    public MachineLoaderServiceOptimalImpl(){
+    public MachineLoaderServiceOptimalImpl() {
         this.getStartPositionService = new GetStartPositionServiceImpl();
         this.checkInParcelService = new CheckInParcelServiceImpl();
     }
+
     @Override
     public int[][] addParcels(int[][] parcel, int heightMax, int widthMax, int[][] scheme) {
         int widths = parcel[parcel.length - 1].length;

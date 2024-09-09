@@ -1,7 +1,7 @@
 package ru.liga.sevice;
 
 import ru.liga.parcel.Parcels;
-import ru.liga.tuuck.Garage;
+import ru.liga.truck.Garage;
 
 public interface ProcessLoaderService {
 

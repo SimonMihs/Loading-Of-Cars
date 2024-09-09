@@ -4,8 +4,8 @@ import ru.liga.parcel.ParcelContainer;
 import ru.liga.parcel.Parcels;
 import ru.liga.sevice.MachineLoaderService;
 import ru.liga.sevice.ProcessLoaderService;
-import ru.liga.tuuck.Garage;
-import ru.liga.tuuck.Truck;
+import ru.liga.truck.Garage;
+import ru.liga.truck.Truck;
 
 import java.util.Map;
 import java.util.Objects;
@@ -39,11 +39,8 @@ public class ProcessLoaderServiceImpl implements ProcessLoaderService {
 
                 int[][] scheme = truck.getScheme();
                 scheme = addParcels(parcel.getKey().getParcel(), scheme, algorithmName, truckHeight, truckWidth);
-
                 if (scheme != null) {
-
                     truck.setTruck(scheme);
-
                 }
                 if ((scheme == null) || (i == parcel.getValue() - 1 && k == parcels.getParcel().size() - 1)) {
 
@@ -55,11 +52,8 @@ public class ProcessLoaderServiceImpl implements ProcessLoaderService {
                 }
             }
         }
-
-
         return garage;
     }
-
 
     private String[] convertTruck(int[][] scheme, ParcelContainer parcels, String[] truck) {
 
@@ -76,7 +70,6 @@ public class ProcessLoaderServiceImpl implements ProcessLoaderService {
             k++;
         }
         return truck;
-
     }
 
     public int[][] addParcels(int[][] parcel, int[][] scheme, String algorithmName, int height, int width) {
@@ -90,8 +83,6 @@ public class ProcessLoaderServiceImpl implements ProcessLoaderService {
             return field1;
         }
         return null;
-
     }
-
 
 }

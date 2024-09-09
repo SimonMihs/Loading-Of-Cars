@@ -25,20 +25,19 @@ public class MachineLoaderServiceSingleImpl implements MachineLoaderService {
         int heights = parcel.length;
         int k = parcel.length - 1;
         int l = 0;
-        int[][] resScheme = scheme;
         int startI = checkInParcelService.checkInParcel(parcel, scheme);
 
         if (startI >= 0) {
             int startJ = getStartPositionService.getStartPosition(scheme[startI]);
             for (int i = startI; i < startI + heights; i++) {
                 for (int j = startJ; j < startJ + widths; j++) {
-                    resScheme[i][j] = parcel[k][l];
+                    scheme[i][j] = parcel[k][l];
                     l++;
                 }
                 l = 0;
                 k--;
             }
-            return resScheme;
+            return scheme;
         }
         return null;
     }

@@ -1,4 +1,4 @@
-package ru.liga.tuuck.sevice.imp;
+package ru.liga.truck.sevice.imp;
 
 import org.junit.jupiter.api.Test;
 import ru.liga.sevice.imp.MachineLoaderServiceOptimalImpl;

@@ -19,29 +19,20 @@ public class MachineLoaderServiceBaseService implements MachineLoaderService {
         int l = 0;
         int[][] field1 = scheme;
 
-
         if (heightMax >= parcel.length + startI && widthMax >= parcel[0].length + startJ) {
             for (int i = startI; i < startI + heights; i++) {
-
                 for (int j = startJ; j < startJ + widths; j++) {
-
                     field1[i][j] = parcel[k][l];
                     l++;
-
                 }
-
                 l = 0;
                 k--;
-
             }
             updateParam(field1, heightMax, widthMax);
-
             return field1;
         }
-
         return null;
     }
-
     private void updateParam(int[][] field, int height, int width) {
         int maxH = 0;
         int maxW = 0;
@@ -70,7 +61,6 @@ public class MachineLoaderServiceBaseService implements MachineLoaderService {
                 startJ = startJTemp[i];
             }
         }
-
     }
 
 }

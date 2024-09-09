@@ -40,7 +40,7 @@ public class ScannerFile {
 
         }
 
-        if(!parcelList.isEmpty()){
+        if (!parcelList.isEmpty()) {
             parcels.add(intParcel(parcelList));
             parcelList.clear();
         }
