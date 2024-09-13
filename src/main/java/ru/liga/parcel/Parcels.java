@@ -2,11 +2,12 @@ package ru.liga.parcel;
 
 import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 
 
 public class Parcels {
 
-    private final LinkedHashMap<ParcelContainer, Integer> parcel;
+    private final Map<ParcelContainer, Integer> parcel;
     private final List<int[][]> parcelList;
 
     public Parcels(List<int[][]> parcelsInt) {
@@ -30,7 +31,7 @@ public class Parcels {
         }
     }
 
-    public LinkedHashMap<ParcelContainer, Integer> getParcel() {
+    public Map<ParcelContainer, Integer> getParcel() {
 
         return parcel;
 

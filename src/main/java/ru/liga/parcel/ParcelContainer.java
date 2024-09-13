@@ -1,4 +1,4 @@
-package ru.liga.parcel;
+  package ru.liga.parcel;
 
 import java.util.Arrays;
 
@@ -8,12 +8,15 @@ public class ParcelContainer {
 
 
     public ParcelContainer(int[][] parcel) {
-        this.parcel = parcel;
+        if (parcel == null) {
+            throw new IllegalArgumentException("Посылка не может быть null");
+        }
+        this.parcel = deepCopy(parcel);
     }
 
 
     public int[][] getParcel() {
-        return parcel;
+        return deepCopy(parcel);
     }
 
     @Override
@@ -27,6 +30,24 @@ public class ParcelContainer {
     @Override
     public int hashCode() {
         return Arrays.deepHashCode(parcel);
+    }
+
+    @Override
+    public String toString() {
+        return "ParcelContainer{" +
+               "parcel=" + Arrays.deepToString(parcel) +
+               '}';
+    }
+
+    private int[][] deepCopy(int[][] original) {
+        if (original == null) {
+            return null;
+        }
+        int[][] result = new int[original.length][];
+        for (int i = 0; i < original.length; i++) {
+            result[i] = Arrays.copyOf(original[i], original[i].length);
+        }
+        return result;
     }
 
 }

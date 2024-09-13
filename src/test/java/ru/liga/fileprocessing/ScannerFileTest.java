@@ -14,12 +14,12 @@ class ScannerFileTest {
     @Test
     public void testparsFile_ValidFile() {
         // Arrange
-        ScannerFile container = new ScannerFile(); // Предполагаем, что у вас есть класс ParcelContainer
+        FileScanner container = new FileScanner(); // Предполагаем, что у вас есть класс ParcelContainer
         String filePath = "src/main/resources/data"; // Путь к вашему тестовому файлу
 
         //String[] parcels = ;
 
-        assertNotNull(container.parsFile(filePath));
+        assertNotNull(container.parseFile(filePath));
 
     }
 

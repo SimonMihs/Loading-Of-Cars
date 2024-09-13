@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -14,7 +15,7 @@ class ParcelsTest {
     void testEmptyParcels() {
         List<int[][]> emptyParcels = new ArrayList<>();
         Parcels parcels = new Parcels(emptyParcels);
-        LinkedHashMap<ParcelContainer, Integer> result = parcels.getParcel();
+        Map<ParcelContainer, Integer> result = parcels.getParcel();
         assertTrue(result.isEmpty());
     }
 
@@ -26,8 +27,8 @@ class ParcelsTest {
         parcelsInt.add(parcel1);
         parcelsInt.add(parcel2);
         Parcels parcels = new Parcels(parcelsInt);
-        LinkedHashMap<ParcelContainer, Integer> result = parcels.getParcel();
-        assertEquals(1, result.size());
+        Map<ParcelContainer, Integer> result = parcels.getParcel();
+        assertEquals(2, result.size());
         assertTrue(result.containsKey(new ParcelContainer(parcel1)));
         assertEquals(1, result.get(new ParcelContainer(parcel1)));
     }
@@ -40,7 +41,7 @@ class ParcelsTest {
         parcelsInt.add(parcel1);
         parcelsInt.add(parcel2);
         Parcels parcels = new Parcels(parcelsInt);
-        LinkedHashMap<ParcelContainer, Integer> result = parcels.getParcel();
+        Map<ParcelContainer, Integer> result = parcels.getParcel();
         assertEquals(1, result.size());
         assertTrue(result.containsKey(new ParcelContainer(parcel1)));
         assertEquals(2, result.get(new ParcelContainer(parcel1)));
@@ -54,7 +55,7 @@ class ParcelsTest {
         parcelsInt.add(parcel1);
         parcelsInt.add(parcel2);
         Parcels parcels = new Parcels(parcelsInt);
-        LinkedHashMap<ParcelContainer, Integer> result = parcels.getParcel();
+        Map<ParcelContainer, Integer> result = parcels.getParcel();
         assertEquals(2, result.size());
         assertTrue(result.containsKey(new ParcelContainer(parcel1)));
         assertEquals(1, result.get(new ParcelContainer(parcel1)));

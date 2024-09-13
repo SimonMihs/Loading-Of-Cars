@@ -3,7 +3,7 @@ package ru.liga.sevice.imp;
 
 import ru.liga.sevice.MachineLoaderService;
 
-public class MachineLoaderServiceBaseService implements MachineLoaderService {
+public class MachineLoaderServiceBaseImpl implements MachineLoaderService {
     private int heightMax = 0;
     private int widthMax = 0;
     private int startI = 0;

@@ -1,6 +1,6 @@
 package ru.liga;
 
-import ru.liga.fileprocessing.ScannerFile;
+import ru.liga.fileprocessing.FileScanner;
 import ru.liga.parcel.Parcels;
 import ru.liga.sevice.ProcessLoaderService;
 import ru.liga.sevice.imp.ProcessLoaderServiceNewImpl;
@@ -16,8 +16,8 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Введите имя алгоритма: Single, Base, Optimal");
-        ScannerFile scannerFile = new ScannerFile();
-        Parcels parcels = new Parcels(scannerFile.parsFile("src/main/resources/data"));
+        FileScanner scannerFile = new FileScanner();
+        Parcels parcels = new Parcels(scannerFile.parseFile("src/main/resources/data"));
         ProcessLoaderService processLoaderServiceImpl = new ProcessLoaderServiceNewImpl();
 
         Garage garage = processLoaderServiceImpl.runLoader(parcels, 6, 6, scanner.nextLine());
