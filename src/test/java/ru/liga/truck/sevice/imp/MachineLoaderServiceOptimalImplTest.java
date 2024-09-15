@@ -1,7 +1,7 @@
 package ru.liga.truck.sevice.imp;
 
 import org.junit.jupiter.api.Test;
-import ru.liga.sevice.imp.MachineLoaderServiceOptimalImpl;
+import ru.liga.service.impl.MachineLoaderServiceOptimalImpl;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;

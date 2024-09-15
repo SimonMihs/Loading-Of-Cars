@@ -1,8 +1,8 @@
 package ru.liga.truck.sevice.imp;
 
 import org.junit.jupiter.api.Test;
-import ru.liga.sevice.GetStartPositionService;
-import ru.liga.sevice.imp.GetStartPositionServiceImpl;
+import ru.liga.service.GetStartPositionService;
+import ru.liga.service.impl.GetStartPositionServiceImpl;
 
 import static org.junit.jupiter.api.Assertions.*;
 

@@ -2,8 +2,8 @@ package ru.liga;
 
 import ru.liga.fileprocessing.FileScanner;
 import ru.liga.parcel.Parcels;
-import ru.liga.sevice.ProcessLoaderService;
-import ru.liga.sevice.imp.ProcessLoaderServiceNewImpl;
+import ru.liga.service.ProcessLoaderService;
+import ru.liga.service.impl.ProcessLoaderServiceNewImpl;
 import ru.liga.truck.Garage;
 import ru.liga.truck.Truck;
 

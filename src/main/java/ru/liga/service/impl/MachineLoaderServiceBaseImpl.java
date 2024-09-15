@@ -1,7 +1,7 @@
-package ru.liga.sevice.imp;
+package ru.liga.service.impl;
 
 
-import ru.liga.sevice.MachineLoaderService;
+import ru.liga.service.MachineLoaderService;
 
 public class MachineLoaderServiceBaseImpl implements MachineLoaderService {
     private int heightMax = 0;

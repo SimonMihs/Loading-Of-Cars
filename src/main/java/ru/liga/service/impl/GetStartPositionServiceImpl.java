@@ -1,6 +1,6 @@
-package ru.liga.sevice.imp;
+package ru.liga.service.impl;
 
-import ru.liga.sevice.GetStartPositionService;
+import ru.liga.service.GetStartPositionService;
 
 public class GetStartPositionServiceImpl implements GetStartPositionService {
     @Override

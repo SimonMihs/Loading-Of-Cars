@@ -1,4 +1,4 @@
-package ru.liga.sevice;
+package ru.liga.service;
 
 public interface CheckInParcelService {
 

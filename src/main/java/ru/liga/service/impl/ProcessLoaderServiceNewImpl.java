@@ -1,8 +1,8 @@
-package ru.liga.sevice.imp;
+package ru.liga.service.impl;
 
 import ru.liga.parcel.Parcels;
-import ru.liga.sevice.MachineLoaderService;
-import ru.liga.sevice.ProcessLoaderService;
+import ru.liga.service.MachineLoaderService;
+import ru.liga.service.ProcessLoaderService;
 import ru.liga.truck.Garage;
 import ru.liga.truck.Truck;
 
@@ -18,7 +18,7 @@ public class ProcessLoaderServiceNewImpl implements ProcessLoaderService {
 
     public ProcessLoaderServiceNewImpl() {
         machineLoaderServiceOptimalImpl = new MachineLoaderServiceOptimalImpl();
-        baseLoader = new MachineLoaderServiceBaseService();
+        baseLoader = new MachineLoaderServiceBaseImpl();
         garage = new Garage();
         machineLoaderServiceSingleImpl = new MachineLoaderServiceSingleImpl();
     }

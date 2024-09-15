@@ -1,8 +1,8 @@
 package ru.liga.truck.sevice.imp;
 
 import org.junit.jupiter.api.Test;
-import ru.liga.sevice.CheckInParcelService;
-import ru.liga.sevice.imp.CheckInParcelServiceImpl;
+import ru.liga.service.CheckInParcelService;
+import ru.liga.service.impl.CheckInParcelServiceImpl;
 
 import static org.junit.jupiter.api.Assertions.*;
 

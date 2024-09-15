@@ -1,6 +1,6 @@
-package ru.liga.sevice.imp;
+package ru.liga.service.impl;
 
-import ru.liga.sevice.CheckInParcelService;
+import ru.liga.service.CheckInParcelService;
 
 public class CheckInParcelServiceImpl implements CheckInParcelService {
     @Override

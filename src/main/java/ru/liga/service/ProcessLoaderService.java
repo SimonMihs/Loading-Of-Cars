@@ -1,4 +1,4 @@
-package ru.liga.sevice;
+package ru.liga.service;
 
 import ru.liga.parcel.Parcels;
 import ru.liga.truck.Garage;
